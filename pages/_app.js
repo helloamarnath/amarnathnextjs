@@ -6,7 +6,14 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
 import HeaderComponent from '../src/components/HeaderComponent';
 import FooterComponent from '../src/components/FooterComponent';
-
+import NProgress from 'nprogress'
+import Router from 'next/router'
+Router.events.on('routeChangeStart', url => {
+  console.log(`Loading: ${url}`)
+  NProgress.start()
+})
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 export default function MyApp(props) {
   const { Component, pageProps } = props;
 
@@ -24,6 +31,8 @@ export default function MyApp(props) {
         <title>Amarnath TSR | Web and mobile application developer</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+              {/* Import CSS for nprogress */}
+              <link rel="stylesheet" type="text/css" href="/assets/css/nprogress.css" />
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
