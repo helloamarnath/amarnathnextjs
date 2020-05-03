@@ -31,7 +31,8 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import TwitterIcon from '@material-ui/icons/Twitter';
+import TwitterIcon from "@material-ui/icons/Twitter";
+import NextLink from "next/link";
 const StyledBadge = withStyles((theme) => ({
   badge: {
     backgroundColor: "#44b700",
@@ -68,29 +69,39 @@ function Copyright() {
   return (
     <>
       <Typography variant="body2" color="textSecondary" align="center">
-        <Link color="inherit" href="https://material-ui.com/">
+            <NextLink href="/">
+        <Link color="inherit" >
           Home
         </Link>
+        </NextLink>
         {" | "}
-        <Link color="inherit" href="https://material-ui.com/">
+        <NextLink href="/aboutme">
+        <Link color="inherit" >
           About Me
         </Link>
+        </NextLink>
         {" | "}
-        <Link color="inherit" href="https://material-ui.com/">
+        <NextLink href="/work">
+        <Link color="inherit" >
           Work
         </Link>
+        </NextLink>
         {" | "}
-        <Link color="inherit" href="https://material-ui.com/">
+        <NextLink href="/contactme">
+        <Link color="inherit" >
           Contact Me
         </Link>
+        </NextLink>
         {" | "}
-        <Link color="inherit" href="https://material-ui.com/">
+       
+        <Link color="inherit" target="_blank" href="https://www.upwork.com/o/profiles/users/~0151f08e97cf39660b/" >
           HireMe
         </Link>
+  
       </Typography>
       <Typography variant="body2" color="textSecondary" align="center">
         {"Copyright © "}
-        <Link color="inherit" href="https://material-ui.com/">
+        <Link color="inherit" >
           Your Website
         </Link>{" "}
         {new Date().getFullYear()}
@@ -173,10 +184,10 @@ const useStyles = makeStyles((theme) => ({
   fullList: {
     width: "auto",
   },
-  socialgrid:{
+  socialgrid: {
     paddingTop: theme.spacing(2),
-    paddingLeft:theme.spacing(5),
-  }
+    paddingLeft: theme.spacing(5),
+  },
 }));
 
 export default function Index() {
@@ -209,37 +220,47 @@ export default function Index() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem button>
-          <ListItemIcon>
-            <HomeIcon />{" "}
-          </ListItemIcon>
-          <ListItemText primary={"Home"} />
-        </ListItem>
-
-        <ListItem button>
-          <ListItemIcon>
-            <AccountCircleIcon />{" "}
-          </ListItemIcon>
-          <ListItemText primary={"About Me"} />
-        </ListItem>
-
+        <NextLink href="/">
+          <ListItem button>
+            <ListItemIcon>
+              <HomeIcon />{" "}
+            </ListItemIcon>
+            <ListItemText primary={"Home"} />
+          </ListItem>
+        </NextLink>
+        <NextLink href="/aboutme">
+          <ListItem button>
+            <ListItemIcon>
+              <AccountCircleIcon />{" "}
+            </ListItemIcon>
+            <ListItemText primary={"About Me"} />
+          </ListItem>
+        </NextLink>
+        <NextLink href="/work">
         <ListItem button>
           <ListItemIcon>
             <WorkIcon />{" "}
           </ListItemIcon>
           <ListItemText primary={"Work"} />
         </ListItem>
-
-        <ListItem button>
-          <ListItemIcon>
-            <ContactMailIcon />{" "}
-          </ListItemIcon>
-          <ListItemText primary={"Contact Me"} />
-        </ListItem>
+        </NextLink>
+        <NextLink href="/contactme">
+          <ListItem button>
+            <ListItemIcon>
+              <ContactMailIcon />{" "}
+            </ListItemIcon>
+            <ListItemText primary={"Contact Me"} />
+          </ListItem>
+        </NextLink>
       </List>
       <Divider />
       <List>
-        <Button href="#" variant="outlined" className={classes.swipemenulink}>
+        <Button
+          target="_blank"
+          href="https://www.upwork.com/o/profiles/users/~0151f08e97cf39660b/"
+          variant="outlined"
+          className={classes.swipemenulink}
+        >
           Hire Me
         </Button>
       </List>
@@ -286,41 +307,53 @@ export default function Index() {
           </Typography>
           <Hidden only={["sm", "xs"]}>
             <nav>
-              <Link
-                variant="button"
-                color="textPrimary"
-                href="#"
-                className={classes.link}
-              >
-                Home
-              </Link>
-              <Link
-                variant="button"
-                color="textPrimary"
-                href="#"
-                className={classes.link}
-              >
-                About Me
-              </Link>
-              <Link
-                variant="button"
-                color="textPrimary"
-                href="#"
-                className={classes.link}
-              >
-                Work
-              </Link>
-              <Link
-                variant="button"
-                color="textPrimary"
-                href="#"
-                className={classes.link}
-              >
-                Contact Me
-              </Link>
+              <NextLink href="/">
+                <Link
+                  variant="button"
+                  color="textPrimary"
+                  className={classes.link}
+                >
+                  Home
+                </Link>
+              </NextLink>
+              <NextLink href="/aboutme">
+                <Link
+                  variant="button"
+                  color="textPrimary"
+                  className={classes.link}
+                >
+                  About Me
+                </Link>
+              </NextLink>
+              <NextLink href="/work">
+                <Link
+                  variant="button"
+                  color="textPrimary"
+                  href="#"
+                  className={classes.link}
+                >
+                  Work
+                </Link>
+              </NextLink>
+              <NextLink href="/contactme">
+                <Link
+                  variant="button"
+                  color="textPrimary"
+                  href="#"
+                  className={classes.link}
+                >
+                  Contact Me
+                </Link>
+              </NextLink>
             </nav>
           </Hidden>
-          <Button href="#" variant="outlined" className={classes.link}>
+
+          <Button
+            target="_blank"
+            href="https://www.upwork.com/o/profiles/users/~0151f08e97cf39660b/"
+            variant="outlined"
+            className={classes.link}
+          >
             Hire Me
           </Button>
         </Toolbar>
@@ -373,47 +406,47 @@ export default function Index() {
           Web and Mobile App Developer
         </Typography>
 
-        <Grid container xs={12} className={classes.socialgrid} >
+        <Grid container xs={12} className={classes.socialgrid}>
           <Grid item xs={2} spacing={0}>
-          <IconButton  aria-label="upload picture" component="span">
-            <Avatar>
-              <GitHubIcon />
-            </Avatar>
+            <IconButton aria-label="upload picture" component="span">
+              <Avatar>
+                <GitHubIcon />
+              </Avatar>
             </IconButton>
           </Grid>
           <Grid item xs={2} spacing={0}>
-          <IconButton  aria-label="upload picture" component="span">
-            <Avatar>
-              <LinkedInIcon />
-            </Avatar>
+            <IconButton aria-label="upload picture" component="span">
+              <Avatar>
+                <LinkedInIcon />
+              </Avatar>
             </IconButton>
           </Grid>
           <Grid item xs={2} spacing={0}>
-          <IconButton  aria-label="upload picture" component="span">
-            <Avatar>
-              <TwitterIcon />
-            </Avatar>
+            <IconButton aria-label="upload picture" component="span">
+              <Avatar>
+                <TwitterIcon />
+              </Avatar>
             </IconButton>
           </Grid>
           <Grid item xs={2} spacing={0}>
-          <IconButton  aria-label="upload picture" component="span">
-            <Avatar>
-              <FacebookIcon />
-            </Avatar>
+            <IconButton aria-label="upload picture" component="span">
+              <Avatar>
+                <FacebookIcon />
+              </Avatar>
             </IconButton>
           </Grid>
           <Grid item xs={2} spacing={0}>
-          <IconButton  aria-label="upload picture" component="span">
-            <Avatar>
-              <InstagramIcon />
-            </Avatar>
+            <IconButton aria-label="upload picture" component="span">
+              <Avatar>
+                <InstagramIcon />
+              </Avatar>
             </IconButton>
           </Grid>
           <Grid item xs={2} spacing={0}>
-          <IconButton  aria-label="upload picture" component="span">
-            <Avatar>
-              <WhatsAppIcon />
-            </Avatar>
+            <IconButton aria-label="upload picture" component="span">
+              <Avatar>
+                <WhatsAppIcon />
+              </Avatar>
             </IconButton>
           </Grid>
         </Grid>
