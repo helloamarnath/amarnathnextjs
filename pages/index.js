@@ -101,8 +101,8 @@ function Copyright() {
       </Typography>
       <Typography variant="body2" color="textSecondary" align="center">
         {"Copyright © "}
-        <Link color="inherit" >
-          Your Website
+        <Link href='/' color="inherit" >
+          amarnath.dev
         </Link>{" "}
         {new Date().getFullYear()}
         {"."}
