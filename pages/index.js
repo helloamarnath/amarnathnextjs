@@ -368,28 +368,28 @@ export default function Index() {
           Web and Mobile App Developer
         </Typography>
 
-        <Grid container direction="row" justify="center" alignItems="center">
-          <Grid item xs={1} spacing={3}>
+        <Grid container xs={12} direction="row" justify="center" alignItems="center">
+          <Grid item xs={1} spacing={5}>
             <Avatar>
               <GitHubIcon />
             </Avatar>
           </Grid>
-          <Grid item xs={1} spacing={3}>
+          <Grid item xs={1} spacing={5}>
             <Avatar>
               <LinkedInIcon />
             </Avatar>
           </Grid>
-          <Grid item xs={1} spacing={3}>
+          <Grid item xs={1} spacing={5}>
             <Avatar>
               <FacebookIcon />
             </Avatar>
           </Grid>
-          <Grid item xs={1} spacing={3}>
+          <Grid item xs={1} spacing={5}>
             <Avatar>
               <InstagramIcon />
             </Avatar>
           </Grid>
-          <Grid item xs={1} spacing={3}>
+          <Grid item xs={1} spacing={5}>
             <Avatar>
               <WhatsAppIcon />
             </Avatar>
