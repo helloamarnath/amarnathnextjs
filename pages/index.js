@@ -231,6 +231,14 @@ export default function Index() {
   return (
     <React.Fragment>
       <CssBaseline />
+      <SwipeableDrawer
+            anchor={"left"}
+            open={state["left"]}
+            onClose={toggleDrawer("left", false)}
+            onOpen={toggleDrawer("left", true)}
+          >
+            {list("left")}
+          </SwipeableDrawer>
       <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
         <Hidden only={['xl', 'lg']}>    <IconButton onClick={toggleDrawer("left", true)} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
@@ -260,14 +268,7 @@ export default function Index() {
             Hire Me
           </Button>
         </Toolbar>
-          <SwipeableDrawer
-            anchor={"left"}
-            open={state["left"]}
-            onClose={toggleDrawer("left", false)}
-            onOpen={toggleDrawer("left", true)}
-          >
-            {list("left")}
-          </SwipeableDrawer>
+          
       </AppBar>
       {/* Hero unit */}
       <Container maxWidth="sm" component="main" className={classes.heroContent}>
