@@ -123,7 +123,7 @@ const useStyles = makeStyles((theme) => ({
   },
   socialgrid: {
     paddingTop: theme.spacing(2),
-    paddingLeft: theme.spacing(5),
+    paddingLeft: theme.spacing(3),
   },
 }));
 
