@@ -31,6 +31,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import InstagramIcon from "@material-ui/icons/Instagram";
+import TwitterIcon from '@material-ui/icons/Twitter';
 const StyledBadge = withStyles((theme) => ({
   badge: {
     backgroundColor: "#44b700",
@@ -172,6 +173,10 @@ const useStyles = makeStyles((theme) => ({
   fullList: {
     width: "auto",
   },
+  socialgrid:{
+    paddingTop: theme.spacing(2),
+    paddingLeft:theme.spacing(6),
+  }
 }));
 
 export default function Index() {
@@ -368,28 +373,33 @@ export default function Index() {
           Web and Mobile App Developer
         </Typography>
 
-        <Grid container xs={12} direction="row" justify="center" alignItems="center">
-          <Grid item xs={1} spacing={5}>
+        <Grid container xs={12} className={classes.socialgrid} >
+          <Grid item xs={2} spacing={0}>
             <Avatar>
               <GitHubIcon />
             </Avatar>
           </Grid>
-          <Grid item xs={1} spacing={5}>
+          <Grid item xs={2} spacing={0}>
             <Avatar>
               <LinkedInIcon />
             </Avatar>
           </Grid>
-          <Grid item xs={1} spacing={5}>
+          <Grid item xs={2} spacing={0}>
+            <Avatar>
+              <TwitterIcon />
+            </Avatar>
+          </Grid>
+          <Grid item xs={2} spacing={0}>
             <Avatar>
               <FacebookIcon />
             </Avatar>
           </Grid>
-          <Grid item xs={1} spacing={5}>
+          <Grid item xs={2} spacing={0}>
             <Avatar>
               <InstagramIcon />
             </Avatar>
           </Grid>
-          <Grid item xs={1} spacing={5}>
+          <Grid item xs={2} spacing={0}>
             <Avatar>
               <WhatsAppIcon />
             </Avatar>
