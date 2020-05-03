@@ -175,7 +175,7 @@ const useStyles = makeStyles((theme) => ({
   },
   socialgrid:{
     paddingTop: theme.spacing(2),
-    paddingLeft:theme.spacing(6),
+    paddingLeft:theme.spacing(5),
   }
 }));
 
@@ -350,7 +350,7 @@ export default function Index() {
           >
             <Avatar
               alt="Remy Sharp"
-              src="assets/images/amarnathlogo.png"
+              src="assets/images/amarnathlogo.webp"
               className={classes.large}
             />
           </StyledBadge>
@@ -375,34 +375,46 @@ export default function Index() {
 
         <Grid container xs={12} className={classes.socialgrid} >
           <Grid item xs={2} spacing={0}>
+          <IconButton  aria-label="upload picture" component="span">
             <Avatar>
               <GitHubIcon />
             </Avatar>
+            </IconButton>
           </Grid>
           <Grid item xs={2} spacing={0}>
+          <IconButton  aria-label="upload picture" component="span">
             <Avatar>
               <LinkedInIcon />
             </Avatar>
+            </IconButton>
           </Grid>
           <Grid item xs={2} spacing={0}>
+          <IconButton  aria-label="upload picture" component="span">
             <Avatar>
               <TwitterIcon />
             </Avatar>
+            </IconButton>
           </Grid>
           <Grid item xs={2} spacing={0}>
+          <IconButton  aria-label="upload picture" component="span">
             <Avatar>
               <FacebookIcon />
             </Avatar>
+            </IconButton>
           </Grid>
           <Grid item xs={2} spacing={0}>
+          <IconButton  aria-label="upload picture" component="span">
             <Avatar>
               <InstagramIcon />
             </Avatar>
+            </IconButton>
           </Grid>
           <Grid item xs={2} spacing={0}>
+          <IconButton  aria-label="upload picture" component="span">
             <Avatar>
               <WhatsAppIcon />
             </Avatar>
+            </IconButton>
           </Grid>
         </Grid>
       </Container>
@@ -424,7 +436,6 @@ export default function Index() {
             gutterBottom
           >
             Hi,
-            <Divider />
           </Typography>
           <Typography
             variant="h5"
