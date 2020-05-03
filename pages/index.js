@@ -69,39 +69,34 @@ function Copyright() {
   return (
     <>
       <Typography variant="body2" color="textSecondary" align="center">
-            <NextLink href="/">
-        <Link color="inherit" >
-          Home
-        </Link>
+        <NextLink href="/">
+          <Link color="inherit">Home</Link>
         </NextLink>
         {" | "}
         <NextLink href="/aboutme">
-        <Link color="inherit" >
-          About Me
-        </Link>
+          <Link color="inherit">About Me</Link>
         </NextLink>
         {" | "}
         <NextLink href="/work">
-        <Link color="inherit" >
-          Work
-        </Link>
+          <Link color="inherit">Work</Link>
         </NextLink>
         {" | "}
         <NextLink href="/contactme">
-        <Link color="inherit" >
-          Contact Me
-        </Link>
+          <Link color="inherit">Contact Me</Link>
         </NextLink>
         {" | "}
-       
-        <Link color="inherit" target="_blank" href="https://www.upwork.com/o/profiles/users/~0151f08e97cf39660b/" >
+
+        <Link
+          color="inherit"
+          target="_blank"
+          href="https://www.upwork.com/o/profiles/users/~0151f08e97cf39660b/"
+        >
           HireMe
         </Link>
-  
       </Typography>
       <Typography variant="body2" color="textSecondary" align="center">
         {"Copyright © "}
-        <Link href='/' color="inherit" >
+        <Link href="/" color="inherit">
           amarnath.dev
         </Link>{" "}
         {new Date().getFullYear()}
@@ -237,12 +232,12 @@ export default function Index() {
           </ListItem>
         </NextLink>
         <NextLink href="/work">
-        <ListItem button>
-          <ListItemIcon>
-            <WorkIcon />{" "}
-          </ListItemIcon>
-          <ListItemText primary={"Work"} />
-        </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <WorkIcon />{" "}
+            </ListItemIcon>
+            <ListItemText primary={"Work"} />
+          </ListItem>
         </NextLink>
         <NextLink href="/contactme">
           <ListItem button>
@@ -329,7 +324,6 @@ export default function Index() {
                 <Link
                   variant="button"
                   color="textPrimary"
-                  href="#"
                   className={classes.link}
                 >
                   Work
@@ -339,7 +333,6 @@ export default function Index() {
                 <Link
                   variant="button"
                   color="textPrimary"
-                  href="#"
                   className={classes.link}
                 >
                   Contact Me
