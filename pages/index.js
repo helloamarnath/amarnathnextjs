@@ -1,31 +1,13 @@
 import React from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
-import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import Box from "@material-ui/core/Box";
 import Badge from "@material-ui/core/Badge";
 import Avatar from "@material-ui/core/Avatar";
-import Divider from "@material-ui/core/Divider";
-import clsx from "clsx";
 import Head from "next/head";
-import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import Hidden from "@material-ui/core/Hidden";
-import HomeIcon from "@material-ui/icons/Home";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
-import ContactMailIcon from "@material-ui/icons/ContactMail";
-import WorkIcon from "@material-ui/icons/Work";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -65,46 +47,6 @@ const StyledBadge = withStyles((theme) => ({
     },
   },
 }))(Badge);
-function Copyright() {
-  return (
-    <>
-      <Typography variant="body2" color="textSecondary" align="center">
-        <NextLink href="/">
-          <Link color="inherit">Home</Link>
-        </NextLink>
-        {" | "}
-        <NextLink href="/aboutme">
-          <Link color="inherit">About Me</Link>
-        </NextLink>
-        {" | "}
-        <NextLink href="/work">
-          <Link color="inherit">Work</Link>
-        </NextLink>
-        {" | "}
-        <NextLink href="/contactme">
-          <Link color="inherit">Contact Me</Link>
-        </NextLink>
-        {" | "}
-
-        <Link
-          color="inherit"
-          target="_blank"
-          href="https://www.upwork.com/o/profiles/users/~0151f08e97cf39660b/"
-        >
-          HireMe
-        </Link>
-      </Typography>
-      <Typography variant="body2" color="textSecondary" align="center">
-        {"Copyright © "}
-        <Link href="/" color="inherit">
-          amarnath.dev
-        </Link>{" "}
-        {new Date().getFullYear()}
-        {"."}
-      </Typography>
-    </>
-  );
-}
 
 const useStyles = makeStyles((theme) => ({
   "@global": {
@@ -187,170 +129,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Index() {
   const classes = useStyles();
-  const [state, setState] = React.useState({
-    top: false,
-    left: false,
-    bottom: false,
-    right: false,
-  });
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (
-      event &&
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
 
-    setState({ ...state, [anchor]: open });
-  };
-
-  const list = (anchor) => (
-    <div
-      className={clsx(classes.list, {
-        [classes.fullList]: anchor === "top" || anchor === "bottom",
-      })}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <List>
-        <NextLink href="/">
-          <ListItem button>
-            <ListItemIcon>
-              <HomeIcon />{" "}
-            </ListItemIcon>
-            <ListItemText primary={"Home"} />
-          </ListItem>
-        </NextLink>
-        <NextLink href="/aboutme">
-          <ListItem button>
-            <ListItemIcon>
-              <AccountCircleIcon />{" "}
-            </ListItemIcon>
-            <ListItemText primary={"About Me"} />
-          </ListItem>
-        </NextLink>
-        <NextLink href="/work">
-          <ListItem button>
-            <ListItemIcon>
-              <WorkIcon />{" "}
-            </ListItemIcon>
-            <ListItemText primary={"Work"} />
-          </ListItem>
-        </NextLink>
-        <NextLink href="/contactme">
-          <ListItem button>
-            <ListItemIcon>
-              <ContactMailIcon />{" "}
-            </ListItemIcon>
-            <ListItemText primary={"Contact Me"} />
-          </ListItem>
-        </NextLink>
-      </List>
-      <Divider />
-      <List>
-        <Button
-          target="_blank"
-          href="https://www.upwork.com/o/profiles/users/~0151f08e97cf39660b/"
-          variant="outlined"
-          className={classes.swipemenulink}
-        >
-          Hire Me
-        </Button>
-      </List>
-    </div>
-  );
   return (
     <React.Fragment>
       <Head></Head>
       <CssBaseline />
-      <SwipeableDrawer
-        anchor={"left"}
-        open={state["left"]}
-        onClose={toggleDrawer("left", false)}
-        onOpen={toggleDrawer("left", true)}
-      >
-        {list("left")}
-      </SwipeableDrawer>
-      <AppBar
-        position="static"
-        color="default"
-        elevation={0}
-        className={classes.appBar}
-      >
-        <Toolbar className={classes.toolbar}>
-          <Hidden only={["xl", "lg"]}>
-            {" "}
-            <IconButton
-              onClick={toggleDrawer("left", true)}
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="menu"
-            >
-              <MenuIcon />
-            </IconButton>
-          </Hidden>
-          <Typography
-            variant="h6"
-            color="inherit"
-            noWrap
-            className={classes.toolbarTitle}
-          >
-            Amarnath TSR
-          </Typography>
-          <Hidden only={["sm", "xs"]}>
-            <nav>
-              <NextLink href="/">
-                <Link
-                  variant="button"
-                  color="textPrimary"
-                  className={classes.link}
-                >
-                  Home
-                </Link>
-              </NextLink>
-              <NextLink href="/aboutme">
-                <Link
-                  variant="button"
-                  color="textPrimary"
-                  className={classes.link}
-                >
-                  About Me
-                </Link>
-              </NextLink>
-              <NextLink href="/work">
-                <Link
-                  variant="button"
-                  color="textPrimary"
-                  className={classes.link}
-                >
-                  Work
-                </Link>
-              </NextLink>
-              <NextLink href="/contactme">
-                <Link
-                  variant="button"
-                  color="textPrimary"
-                  className={classes.link}
-                >
-                  Contact Me
-                </Link>
-              </NextLink>
-            </nav>
-          </Hidden>
 
-          <Button
-            target="_blank"
-            href="https://www.upwork.com/o/profiles/users/~0151f08e97cf39660b/"
-            variant="outlined"
-            className={classes.link}
-          >
-            Hire Me
-          </Button>
-        </Toolbar>
-      </AppBar>
       {/* Hero unit */}
       <Container
         justify="center"
@@ -476,14 +260,6 @@ export default function Index() {
         </Container>
       </Container>
       {/* End hero unit */}
-
-      {/* Footer */}
-      <Container maxWidth="md" component="footer" className={classes.footer}>
-        <Box mt={5}>
-          <Copyright />
-        </Box>
-      </Container>
-      {/* End footer */}
     </React.Fragment>
   );
 }
