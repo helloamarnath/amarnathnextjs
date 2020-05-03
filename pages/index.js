@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
   cardPricing: {
     display: "flex",
     justifyContent: "center",
-    alignItems: "baseline",
+    alignitems: "baseline",
     marginBottom: theme.spacing(2),
   },
   footer: {
@@ -138,7 +138,7 @@ export default function Index() {
       {/* Hero unit */}
       <Container
         justify="center"
-        alignItems="center"
+        alignitems="center"
         maxWidth="sm"
         component="main"
         className={classes.heroContent}
@@ -183,43 +183,43 @@ export default function Index() {
           Web and Mobile App Developer
         </Typography>
 
-        <Grid container xs={12} className={classes.socialgrid}>
-          <Grid item xs={2} spacing={0}>
+        <Grid container item xs={12} className={classes.socialgrid}>
+          <Grid item xs={2} >
             <IconButton aria-label="upload picture" component="span">
               <Avatar>
                 <GitHubIcon />
               </Avatar>
             </IconButton>
           </Grid>
-          <Grid item xs={2} spacing={0}>
+          <Grid item xs={2} >
             <IconButton aria-label="upload picture" component="span">
               <Avatar>
                 <LinkedInIcon />
               </Avatar>
             </IconButton>
           </Grid>
-          <Grid item xs={2} spacing={0}>
+          <Grid item xs={2} >
             <IconButton aria-label="upload picture" component="span">
               <Avatar>
                 <TwitterIcon />
               </Avatar>
             </IconButton>
           </Grid>
-          <Grid item xs={2} spacing={0}>
+          <Grid item xs={2} >
             <IconButton aria-label="upload picture" component="span">
               <Avatar>
                 <FacebookIcon />
               </Avatar>
             </IconButton>
           </Grid>
-          <Grid item xs={2} spacing={0}>
+          <Grid item xs={2} >
             <IconButton aria-label="upload picture" component="span">
               <Avatar>
                 <InstagramIcon />
               </Avatar>
             </IconButton>
           </Grid>
-          <Grid item xs={2} spacing={0}>
+          <Grid item xs={2} >
             <IconButton aria-label="upload picture" component="span">
               <Avatar>
                 <WhatsAppIcon />
