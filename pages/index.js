@@ -180,7 +180,9 @@ export default function Index() {
           color="textSecondary"
           component="p"
         >
-          Web and Mobile App Developer
+          I'm a web designer / Mobile App developer based in India.
+            I have a passion for web design and love to create for web and
+            mobile apps.
         </Typography>
 
         <Grid container item xs={12} className={classes.socialgrid}>
@@ -228,37 +230,7 @@ export default function Index() {
           </Grid>
         </Grid>
       </Container>
-      <Container
-        maxWidth="xl"
-        component="main"
-        className={classes.heroContent1full}
-      >
-        <Container
-          maxWidth="sm"
-          component="main"
-          className={classes.heroContent1}
-        >
-          <Typography
-            component="h1"
-            variant="h2"
-            align="center"
-            color="textPrimary"
-            gutterBottom
-          >
-            Hi,
-          </Typography>
-          <Typography
-            variant="h5"
-            align="center"
-            color="textSecondary"
-            component="p"
-          >
-            I'm a web designer / Mobile App developer based in TamilNadu, India.
-            I have a passion for web design and love to create for web and
-            mobile apps.
-          </Typography>
-        </Container>
-      </Container>
+    
       {/* End hero unit */}
     </React.Fragment>
   );
